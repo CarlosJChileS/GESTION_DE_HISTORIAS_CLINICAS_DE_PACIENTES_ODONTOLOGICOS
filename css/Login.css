@@ -1,0 +1,65 @@
+/* Estilo específico para la página de Login */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Color de fondo adicional */
+    background-image: url('../images/fondo.jpg'); /* Ruta hacia el fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estilo del contenedor para la página de Login */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px; /* Ancho ajustado */
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh; /* Altura ajustada */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilo para los inputs y el botón del Login */
+input, button {
+    width: 90%;
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #97d700;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    font-size: 18px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra interna */
+}
+
+button {
+    background-color: #97d700;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #7fbf00;
+}
+
+/* Responsivo para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+}
