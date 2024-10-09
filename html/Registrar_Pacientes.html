@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Paciente</title>
+    <link rel="stylesheet" href="../css/General.css">
+    <style>
+        /* Ajuste específico para eliminar la línea antes del botón "Volver al Menú" */
+        form {
+            margin-bottom: 0; /* Eliminar márgenes adicionales debajo del formulario */
+        }
+
+        /* Ajuste del botón para asegurar que no haya margen superior */
+        button.full-width-button {
+            margin-top: 0; /* Asegurar que no haya margen superior en el botón */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registrar Paciente</h1>
+        <form id="pacienteForm" onsubmit="registrarPaciente(event)">
+            <input type="text" placeholder="Nombre" name="nombre" required>
+            <input type="text" placeholder="Apellido" name="apellido" required>
+            <input type="text" placeholder="Cédula" name="cedula" maxlength="10" onkeypress="validarSoloNumeros(event)" required>
+            <input type="email" placeholder="Email" name="email" required>
+            <input type="text" placeholder="Teléfono" name="telefono" maxlength="10" onkeypress="validarSoloNumeros(event)" required>
+            
+            <select name="sexo" required>
+                <option value="" disabled selected>Sexo</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+            </select>
+
+            <button type="submit">Guardar</button>
+        </form>
+        
+        <!-- Botón de Volver al Menú sin márgenes adicionales -->
+        <button class="full-width-button" onclick="window.location.href='Menu.html'">Volver al Menú</button>
+    </div>
+    
+    <script src="../js/Registrar_Pacientes.js"></script>
+</body>
+</html>

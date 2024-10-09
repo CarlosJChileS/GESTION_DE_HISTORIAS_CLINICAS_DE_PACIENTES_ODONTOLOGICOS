@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="../css/Login.css"> <!-- Usar CSS específico para el Login -->
+</head>
+<body>
+    <div class="container" id="login">
+        <h1>Iniciar Sesión</h1>
+        <form onsubmit="login(event)">
+            <!-- Campo de entrada para el usuario -->
+            <input type="text" placeholder="Usuario" name="usuario" required autocomplete="username">
+            
+            <!-- Campo de entrada para la contraseña -->
+            <input type="password" placeholder="Contraseña" name="password" required autocomplete="current-password">
+            
+            <!-- Botón de envío -->
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <!-- Script para manejar el inicio de sesión -->
+    <script src="../js/Login.js"></script>
+</body>
+</html>

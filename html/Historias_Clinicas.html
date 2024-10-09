@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historias Clínicas</title>
+    <link rel="stylesheet" href="../css/General.css">
+</head>
+<body>
+    <div class="container" id="historiasClinicas">
+        <h1>Historias Clínicas</h1>
+        <div class="input-button-container">
+            <input type="text" id="buscarCedulaHistorial" placeholder="Buscar por Cédula" maxlength="10" onkeypress="validarSoloNumeros(event)">
+            <button onclick="buscarHistorial()">Buscar</button>
+            <button onclick="mostrarTodosHistorias()">Mostrar Todos</button>
+        </div>
+
+        <div class="cuadro-limite">
+            <ul id="listaHistorias"></ul>
+        </div>
+
+        <div class="button-container">
+            <button id="botonCrearHistoria" onclick="mostrarFormulario()">Crear Historia</button>
+            <button id="botonVolverMenu" type="button" onclick="window.location.href='Menu.html'">Volver al Menú</button>
+        </div>
+    </div>
+
+    <!-- Formulario de creación de Historia Clínica -->
+    <div class="form-container" id="formularioHistoria" style="display: none;">
+        <h2>Crear Historia Clínica</h2>
+        <form id="historiaForm" onsubmit="crearHistoriaClinica(event)">
+            <input type="text" id="cedulaPaciente" name="cedula" placeholder="Cédula del Paciente" maxlength="10" onkeypress="validarSoloNumeros(event)" required>
+            <button type="button" onclick="buscarCitas()">Buscar Citas</button>
+            <select id="selectCita" name="idCita" required>
+                <option value="" disabled selected>Seleccionar ID de la Cita</option>
+            </select>
+            <textarea name="motivoConsulta" placeholder="Motivo de la Consulta" required></textarea>
+            <textarea name="enfermedadActual" placeholder="Enfermedad Actual" required></textarea>
+            <textarea name="antecedentesPatoPersonales" placeholder="Antecedentes Patológicos Personales" required></textarea>
+            <textarea name="antecedentesPatoFamiliares" placeholder="Antecedentes Patológicos Familiares" required></textarea>
+            <textarea name="constantesVitales" placeholder="Constantes Vitales" required></textarea>
+            <textarea name="sistemaEstomatognatico" placeholder="Sistema Estomatognático" required></textarea>
+            <textarea name="odontograma" placeholder="Odontograma" required></textarea>
+            <textarea name="indicadoresSaludBucal" placeholder="Indicadores de Salud Bucal" required></textarea>
+            <input type="text" name="indicesCPO" placeholder="Índices CPO" required>
+            <textarea name="diagnostico" placeholder="Diagnóstico" required></textarea>
+            <textarea name="procedimientos" placeholder="Procedimientos" required></textarea>
+            <textarea name="evolucion" placeholder="Evolución" required></textarea>
+            <button type="submit">Guardar Historia Clínica</button>
+            <button type="button" onclick="ocultarFormulario()">Volver</button>
+        </form>
+    </div>
+
+    <!-- Contenedor para mostrar los detalles de una historia clínica -->
+    <div id="detallesHistoria" style="display: none;"></div>
+
+    <script src="../js/Historias_Clinicas.js"></script>
+</body>
+</html>

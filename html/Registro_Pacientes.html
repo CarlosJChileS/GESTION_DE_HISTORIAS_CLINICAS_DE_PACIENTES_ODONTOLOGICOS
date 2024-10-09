@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Pacientes</title>
+    <link rel="stylesheet" href="../css/General.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Pacientes</h1>
+        
+        <!-- Formulario para buscar en una sola línea -->
+        <div class="input-button-container">
+            <input type="text" id="buscarCedula" placeholder="Buscar por Cédula" onkeypress="validarCedula(event)">
+            <button onclick="buscarPaciente()">Buscar</button>
+            <button onclick="mostrarTodos()">Mostrar Todos</button>
+        </div>
+        
+        <!-- Cuadro para visualizar los pacientes -->
+        <div class="cuadro-limite">
+            <ul id="listaPacientes"></ul>
+        </div>
+        
+        <!-- Botón de Volver al Menú con ancho completo -->
+        <button class="full-width-button" onclick="window.location.href='Menu.html'">Volver al Menú</button>
+    </div>
+    
+    <script src="../js/Registro_Pacientes.js"></script>
+</body>
+</html>

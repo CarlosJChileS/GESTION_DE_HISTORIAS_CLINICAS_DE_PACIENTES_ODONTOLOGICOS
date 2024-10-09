@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Cita</title>
+    <link rel="stylesheet" href="../css/General.css"> <!-- Referencia al archivo CSS -->
+</head>
+<body>
+    <div class="container" id="agendarCita">
+        <h1>Agendar Cita</h1>
+        <form id="citaForm" onsubmit="guardarCita(event)">
+            <input type="text" name="cedula" placeholder="Cédula" maxlength="10" onkeypress="validarSoloNumeros(event)" required>
+            <input type="date" name="fecha" required>
+            <input type="time" name="hora" required>
+            <input type="text" name="ubicacion" placeholder="Ubicación" required>
+            <textarea name="descripcion" placeholder="Descripción" rows="4" required></textarea>
+            <button type="submit">Guardar Cita</button>
+            <button type="button" onclick="window.location.href='Menu.html'">Volver al Menú</button>
+        </form>
+    </div>
+
+    <script src="../js/Agendar_Cita.js"></script>
+</body>
+</html>
